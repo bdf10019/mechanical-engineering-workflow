@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="照片、尺寸與修改要求的本機工程工作流。">
+  <title>機構工程工作流</title>
+  <link rel="stylesheet" href="/workflow.css">
+  <script type="module" src="/workflow.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="機構工程工作流首頁"><span class="brand-mark" aria-hidden="true">◇</span><span>機構工程<span class="brand-sub">工作流</span></span></a>
+    <div class="task-switch"><label class="sr-only" for="task-select">開啟任務</label><select id="task-select"><option value="">選擇任務</option></select><button id="new-task" class="button secondary" type="button">＋ 新任務</button></div>
+    <button id="connection-button" class="connection" type="button"><span class="status-dot" aria-hidden="true"></span><span id="connection-label">AI 未設定</span></button>
+  </header>
+
+  <main class="workspace">
+    <section class="workspace-heading" aria-label="目前任務"><div><p class="eyebrow">ENGINEERING WORKSPACE</p><h1 id="task-title">開始一個任務</h1></div><span id="save-status" class="save-status">資料只存在本機</span></section>
+    <nav class="workflow" id="workflow" aria-label="工作流程"></nav>
+    <section class="next-guide" aria-label="下一步"><span class="guide-arrow" aria-hidden="true">↳</span><div><span class="guide-label">下一步</span><strong id="next-label">建立任務，放入照片</strong></div><button id="next-button" class="button small" type="button">開始 →</button></section>
+    <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+    <section class="work-panel" id="work-panel" aria-label="步驟操作"></section>
+    <footer class="workspace-footer"><span>本機工作區</span><span>模型與工程圖尚未接通</span></footer>
+  </main>
+
+  <dialog id="new-dialog" aria-labelledby="new-dialog-title"><form id="new-form"><div class="dialog-heading"><h2 id="new-dialog-title">新增任務</h2><button class="icon-button" type="button" data-close="new-dialog" aria-label="關閉新增任務">×</button></div><label for="new-name">任務名稱</label><input id="new-name" name="name" maxlength="80" autocomplete="off" required><div class="dialog-actions"><button class="button secondary" type="button" data-close="new-dialog">取消</button><button class="button" id="create-task" type="submit">建立任務</button></div></form></dialog>
+  <dialog id="connection-dialog" aria-labelledby="connection-title"><form id="connection-form"><div class="dialog-heading"><h2 id="connection-title">AI 連線設定</h2><button class="icon-button" type="button" data-close="connection-dialog" aria-label="關閉連線設定">×</button></div><label for="provider">服務</label><select id="provider"><option value="openai">OpenAI API</option></select><label for="model">模型名稱</label><input id="model" autocomplete="off" maxlength="100" required><label for="api-key">API Key</label><input id="api-key" type="password" autocomplete="new-password" required><label for="output-limit">單次最大輸出 Tokens</label><input id="output-limit" type="number" min="256" max="4096" value="2048" required><p class="field-note">金鑰只留服務記憶體。設定連線不會送出照片；每次判讀須另確認費用與資料。</p><div class="dialog-actions"><button class="button secondary" id="disconnect" type="button">清除連線</button><button class="button" type="submit">儲存連線</button></div></form></dialog>
+  <noscript>此本機工具需要啟用 JavaScript。</noscript>
+</body>
+</html>

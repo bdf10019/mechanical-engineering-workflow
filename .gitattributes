@@ -1,0 +1,4 @@
+# Preserve the published snapshot bytes for SHA-256 verification.
+* -text
+*.jpg binary
+*.png binary

@@ -1,0 +1,93 @@
+{
+  "schema": "public-workflow-source-map-v1",
+  "date": "2026-10-25",
+  "product_version": "0.2.0",
+  "runtime_unchanged_from_local_snapshot": true,
+  "runtime_files": [
+    {
+      "path": "app/__init__.py",
+      "bytes": 53,
+      "sha256": "6d8b17826cd669f15844c6f95b082c24feeae6e4019ed0fbf42df6778a3ad5d8"
+    },
+    {
+      "path": "app/photo3d/__init__.py",
+      "bytes": 64,
+      "sha256": "2c345f5f66a3eb39a1bf619340173d5fc67a48bd7ff01f7a64160d93e578e52d"
+    },
+    {
+      "path": "app/photo3d/data.py",
+      "bytes": 8618,
+      "sha256": "1ee377898871e7f31ac9a9fd09c889697dfb46fdf5f621ef491cc7d5f2637525"
+    },
+    {
+      "path": "app/workflow/cloud.py",
+      "bytes": 10299,
+      "sha256": "ca83e2452f0f20e85b2197927c5874ec8b3aeb467bd10364699282e239455594"
+    },
+    {
+      "path": "app/workflow/core.py",
+      "bytes": 18021,
+      "sha256": "adca71779709922fb9b0935b2253d8bee282bd9d7853eb26c4103d06aa944325"
+    },
+    {
+      "path": "app/workflow/server.py",
+      "bytes": 10025,
+      "sha256": "8baae7d8cb583b1aaca6791e1b9a011c2ae9e3a2e88fcb604d0c501b8c370d85"
+    },
+    {
+      "path": "app/workflow/__init__.py",
+      "bytes": 83,
+      "sha256": "69a99c6ded888e59b63db745d55a155b04fb6bcbc28ac447d4202a29545b3c91"
+    },
+    {
+      "path": "app/workflow/web/index.html",
+      "bytes": 3761,
+      "sha256": "c8be097ca481165b4ff8ff8b66deaa109a53f45430f1b10872cd31c73f13dfec"
+    },
+    {
+      "path": "app/workflow/web/workflow-state.mjs",
+      "bytes": 3834,
+      "sha256": "cd83ade6108346c88d60d963698e02f8db34ca7b90765b114c0be17a3400764b"
+    },
+    {
+      "path": "app/workflow/web/workflow.css",
+      "bytes": 12362,
+      "sha256": "59cb9fdb25650add0a2a1b990c34b17cb8b24ee438e5677d9692779c34f0e5a5"
+    },
+    {
+      "path": "app/workflow/web/workflow.js",
+      "bytes": 25570,
+      "sha256": "9db560a48cef1711bae24e864c04c691ed469a4aa17a4a49654908e23bfb793f"
+    },
+    {
+      "path": "tests/workflow/frontend-state.test.mjs",
+      "bytes": 3621,
+      "sha256": "2ef32e91a24a356309b56f2d9e1281a3a6e6e301d850462e76355665bd4453b0"
+    },
+    {
+      "path": "tests/workflow/test_workflow.py",
+      "bytes": 37999,
+      "sha256": "226921fc0fe7a6ec4aed96b05a45c733e93df069eadcb02c7233bd638e10ca46"
+    },
+    {
+      "path": "tests/workflow/__init__.py",
+      "bytes": 80,
+      "sha256": "2876bd0e48402a547b76122e1a5904e6ff19e182d55a8d1d26a65ac21da07eeb"
+    }
+  ],
+  "separate_public_wrappers": [
+    "README.md",
+    "Start-Workflow.cmd",
+    "requirements.txt",
+    "docs/",
+    "LICENSE_INFORMATION.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "excluded": [
+    "private tasks/photos/masks",
+    "old Git history",
+    "engine binaries",
+    "datasets",
+    "local historical archives and raw logs"
+  ]
+}

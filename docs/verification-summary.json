@@ -1,0 +1,81 @@
+{
+  "schema": "public-workflow-evidence-summary-v1",
+  "product_version": "0.2.0",
+  "date": "2026-10-25",
+  "source_kind": "deidentified local documented snapshot; export regression recorded separately",
+  "python": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "expected_failures": 0,
+    "seconds": 8.75,
+    "passed": true
+  },
+  "frontend": {
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "javascript_syntax_exit_code": 0,
+  "browser": {
+    "name": "Chrome",
+    "kind": "AI-operated UI walkthrough, synthetic images and manually authored reply; not independent human engineering validation",
+    "checks": [
+      {
+        "action": "create task",
+        "result": "passed; revision 1"
+      },
+      {
+        "action": "upload valid synthetic image and invalid PNG together",
+        "result": "passed; invalid file rejected, first image still visible and saved at revision 2"
+      },
+      {
+        "action": "choose a valid second image",
+        "result": "passed; two saved images at revision 3"
+      },
+      {
+        "action": "fill simulated dimension and change requirements",
+        "result": "passed; source remains simulated, save revision 4"
+      },
+      {
+        "action": "prepare outgoing input",
+        "result": "passed; revision 5, photos/text/dimensions preview visible, send disabled without API configuration"
+      },
+      {
+        "action": "import manually authored test reply",
+        "result": "passed; revision 6, references/unknowns/photos/dimension visible, origin labeled manual import"
+      },
+      {
+        "action": "acknowledge reading",
+        "result": "passed; revision 7, no engineering approval or model/drawing output"
+      },
+      {
+        "action": "open blocked model node",
+        "result": "passed; displays not connected, no fake generation"
+      },
+      {
+        "action": "reload and reopen saved task",
+        "result": "passed; revision 7 and previous photos/requirements/reply retained"
+      },
+      {
+        "action": "download handoff ZIP",
+        "result": "passed; 361211 bytes, saved locally"
+      }
+    ],
+    "limits": [
+      "Unsaved-leave confirm was observed; dismiss triggered browser-control timeout on original tab. Continuation used a new tab; preservation-after-dismiss is not counted as a browser pass.",
+      "No actual cloud call, model quality assessment, CAD execution or drawing validation.",
+      "No mobile acceptance claimed."
+    ],
+    "screenshots": [
+      "images/workflow-home.jpg",
+      "images/workflow-review.jpg"
+    ]
+  },
+  "live_api_calls": 0,
+  "CAD_calls": 0,
+  "COLMAP_calls": 0,
+  "engineering_approved": false
+}
